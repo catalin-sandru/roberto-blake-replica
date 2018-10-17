@@ -2,4 +2,9 @@ nav.header
   .header__top
     span.header-name Roberto Blake
     span.icon-menu
+  //- check access to json file
+  //- pre=JSON.stringify(data['top-menu'], null, 2)
+ 
   .header__menu-list
+    each item in data['top-menu']
+      a.header__menu-link(href=item.href, target=item.target)=item.text
