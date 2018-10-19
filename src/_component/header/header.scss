@@ -45,7 +45,7 @@
   text-decoration: none;
   padding: 1.5rem;
   display: block;
-
+  cursor: pointer;
 }
 
 .header-menu__sub-link {
@@ -66,6 +66,20 @@
   top: -100%;
 }
 
-#toggle__top-menu {
+#toggle__top-menu,
+#header-sub-menu {
+  // display: none;
+}
+
+.header__sub-menu {
   display: none;
+}
+
+#header-sub-menu:checked +.header__sub-menu {
+  display: inherit;
+}
+
+.icon-circle-down {
+  padding: 0 1rem;
+  // transform: rotate(180deg);
 }
