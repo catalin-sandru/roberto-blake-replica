@@ -1,10 +1,17 @@
 nav.header
-  .header__top
-    span.header-name Roberto Blake
-    label.icon-menu(for="toggle__top-menu")
   //- check access to json file
   //- pre=JSON.stringify(data['top-menu'], null, 2)
   input(type="checkbox", id="toggle__top-menu")
-  .header__menu-list
+  ul.header__menu-list
     each item in data['top-menu']
-      a.header__menu-link(href=item.href, target=item.target)=item.text
+      li.header__menu-item
+        a.header__menu-link(href=item.href, target=item.target)=item.text
+        if item.type && item.type == "dropdown"
+          ul
+            each dropdown in item.children
+              li
+                a.header-menu__sub-link(href=dropdown.href)=dropdown.text
+  .header__top
+    span.header-name Roberto Blake
+    label.icon-menu(for="toggle__top-menu")
+                
