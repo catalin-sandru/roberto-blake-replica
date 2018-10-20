@@ -30,6 +30,7 @@
       font-family: 'RobertoBlakeCustomFont' !important;
       content: "\e902";
       font-size: 2rem;
+      padding: 0 1.5rem;
     }
   }
 }
@@ -68,15 +69,19 @@
 
 #toggle__top-menu,
 #header-sub-menu {
-  // display: none;
+  display: none;
 }
 
 .header__sub-menu {
   display: none;
 }
 
-#header-sub-menu:checked +.header__sub-menu {
+#header-sub-menu:checked + .header__menu-link + .header__sub-menu {
   display: inherit;
+}
+#header-sub-menu:checked + .header__menu-link .icon-circle-down {
+  display: inline-block;
+  transform: rotate(180deg);
 }
 
 .icon-circle-down {

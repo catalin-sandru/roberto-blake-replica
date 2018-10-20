@@ -6,10 +6,10 @@ nav.header
     each item in data['top-menu']
       li.header__menu-item
         if item.type && item.type == "dropdown"
+          input(type="checkbox", id="header-sub-menu")
           label.header__menu-link(for="header-sub-menu")
             span=item.text
             span.icon-circle-down
-          input(type="checkbox", id="header-sub-menu")
           ul.header__sub-menu
             each dropdown in item.children
               li
