@@ -1,7 +1,7 @@
 nav.header
   //- check access to json file
   //- pre=JSON.stringify(data['top-menu'], null, 2)
-  input(type="checkbox", id="toggle__top-menu")
+  input(type="checkbox", id="toggle__top-menu" autocomplete="off")
   ul.header__menu-list
     each item in data['top-menu']
       li.header__menu-item
