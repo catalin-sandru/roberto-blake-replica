@@ -1,4 +1,13 @@
-.footer
-  p Copyright &copy; #{new Date().getFullYear()} All Rights Reserved
-  p
-    a.footer__link(href="/") Roberto Blake
+.footer__social
+  ul
+    each social in data.footer
+      li
+        a.social__icon(
+          href=social.href 
+          title=social.label
+          )
+        p=social.description
+
+p Copyright &copy; #{new Date().getFullYear()} All Rights Reserved
+p
+  a.footer__link(href="/") Roberto Blake

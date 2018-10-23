@@ -13,3 +13,10 @@
     color: $color-bay-of-many;
   }
 }
+
+.social__icon {
+  display: inline-block;
+  width: 15rem;
+  height: 15rem;
+  background-image: url("asset/image/social-sprite.jpg");
+}
