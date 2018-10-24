@@ -1,4 +1,5 @@
-[{
+[
+  {
   "label": "twitter",
   "href": "http://twitter.com/robertoblake",
   "description": "Reach me directly and ask me your questions. #AskRoberto"
@@ -14,4 +15,5 @@
   "label": "facebook",
   "href": "http://facebook.com/robertoblake2",
   "description": "Find out when I'm doing speaking events and what I'm working on."
-}]
+  }
+]
