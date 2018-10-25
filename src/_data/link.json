@@ -1,0 +1,23 @@
+[{
+  "link": "http://www.forbes.com/sites/markfidelman/2016/09/06/20-must-watch-youtube-channels-that-will-change-your-business/",
+  "label": "Forbes, ",
+  "bold": true
+},
+{
+  "link": "http://www.huffingtonpost.com/tayo-rockson/disrupting-creative-servi_b_9154918.html",
+  "label": "Huffington Post, ",
+  "bold": true
+},
+{
+  "link": "https://blogs.adobe.com/creativecloud/tag/roberto-blake/",
+  "label": "Adobe ",
+  "type": "span",
+  "span":{
+    "text": " and "
+  }
+},
+{
+  "link": "http://www.photoshopcreative.co.uk/image/47806/feel_the_noise",
+  "label": "Photoshop Creative Magazines",
+  "bold": true
+}]
