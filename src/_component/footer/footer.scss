@@ -32,17 +32,6 @@
   font-weight: bold;
 }
 
-.footer__link {
-  color: $color-astral;
-  padding: 0.5rem;
-  display: block;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: $color-bay-of-many;
-  }
-}
 
 ul {
   list-style: none;
@@ -65,4 +54,9 @@ ul {
   &:nth-child(4) .social__icon {
     background-position-y: -45rem;
   }
+}
+
+.footer__link{
+  padding: 0.5rem;
+  display: inline-block;
 }

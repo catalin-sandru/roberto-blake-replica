@@ -22,3 +22,14 @@ html, body{
 p {
   font-size: 1.4rem;
 }
+
+a {
+  color: $color-astral;
+  text-decoration: none;
+
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-bay-of-many;
+  }
+}
