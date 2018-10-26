@@ -49,5 +49,14 @@ em {
     position:absolute;
     top: 0;
     left: 0;
+   
+  }
+}
+
+.content-justify {
+  text-align: justify;
+
+  p {
+    padding: 1rem;
   }
 }
