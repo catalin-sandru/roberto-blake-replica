@@ -33,7 +33,7 @@
 
 .header__menu-item {
   &:first-child {
-    &:after {
+    & .header__menu-link:after {
       font-family: 'RobertoBlakeCustomFont' !important;
       content: "\e902";
       font-size: 2rem;
@@ -85,7 +85,9 @@
 
 #header-sub-menu:checked + .header__menu-link + .header__sub-menu {
   display: inherit;
+  position: absolute;
 }
+
 #header-sub-menu:checked + .header__menu-link .icon-circle-down {
   display: inline-block;
   transform: rotate(180deg);

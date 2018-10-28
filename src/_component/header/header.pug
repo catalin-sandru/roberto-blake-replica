@@ -1,12 +1,12 @@
 nav.header
   //- check access to json file
   //- pre=JSON.stringify(data['top-menu'], null, 2)
-  input(type="checkbox", id="toggle__top-menu" autocomplete="off")
+  input(type="checkbox", id="toggle__top-menu", autocomplete="off")
   ul.header__menu-list
     each item in data['top-menu']
       li.header__menu-item
         if item.type && item.type == "dropdown"
-          input(type="checkbox", id="header-sub-menu")
+          input(type="checkbox", id="header-sub-menu", autocomplete="off")
           label.header__menu-link(for="header-sub-menu")
             span=item.text
             span.icon-circle-down
