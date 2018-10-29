@@ -1,0 +1,28 @@
+%button {
+  border: 0.1 rem solid $color-fuel-yellow;
+  border-radius: 0.5rem;
+  background-color: $color-sandy-brown;
+  font-size: 2rem;
+  color: $color-white;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: $color-sandy-brown;
+    border-color: $color-meteor;
+  }
+}
+
+.button__download {
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  @extend %button;
+}
+
+.button__small {
+  padding: 0.4rem 1rem;
+  @extend %button;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
