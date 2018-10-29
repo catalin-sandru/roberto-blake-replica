@@ -13,16 +13,33 @@
 }
 
 .button__download {
+  @extend %button;
   text-transform: uppercase;
   padding: 0.8rem 1.6rem;
-  @extend %button;
 }
 
 .button__small {
-  padding: 0.4rem 1rem;
   @extend %button;
-
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  
+  
   &:hover {
+    background-color: $color-sandy-brown;
     text-decoration: none;
+    color: $color-white;
+  }
+}
+
+.button__small-last {
+  @extend %button;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  background-color: $color-roman;
+  
+  &:hover {
+    background-color: $color-persian-red;
+    text-decoration: none;
+    color: $color-white;
   }
 }
