@@ -81,3 +81,13 @@ h3 {
   list-style-type: disc;
   padding: 1rem 2rem;
 }
+
+.small-images {
+  display: grid;
+
+  img {
+    width: 24rem;
+    height: 13.5rem;
+    padding: 0.5rem;
+  }
+}
