@@ -145,7 +145,29 @@ block content
               frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen)
       hr
+    .side-content
+      h3 Speaking Events
+      h4 Upcoming Speaking Events
+      ul
+        li PODFEST 2018
+        li Social Media Marketing World 2018
+        li Richmond VA, AMA KEYNOTE March 2018
+        li Social media Day Workshop Jacksonville, FL
+        li Social Media Day San Diego, CA
+        li NameSummit 2018
+        li Vidsummit 2018
+        li Video Marketing World 2018
+      h4 Previous Speaking Events
 
+      each listItem in data['link-list']
+        if listItem.link == true
+        ul 
+          li
+            p
+              a(href=listItem.href, target=listItem.target)=listItem.text
+              if listItem.link == null
+                //- each listItem
+                p=listItem.text
     include ../_component/review/review
 
 
