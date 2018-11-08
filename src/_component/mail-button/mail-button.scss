@@ -1,0 +1,17 @@
+.mail-button {
+  background-color: $color-roman;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  // display: flex;
+  // width: 18rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  color: $color-white;
+  
+  
+  &:hover {
+    background-color: $color-persian-red;
+    text-decoration: none;
+    color: $color-white;
+  }
+}

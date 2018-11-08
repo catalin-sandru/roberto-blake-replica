@@ -49,7 +49,7 @@ block content
       p
         a(href="https://www.youtube.com/watch?v=o7u2OOC2O2A") SESSION SAMPLE: SOCIAL MEDIA MARKETING WORLD 2017
 
-      ul
+      ul.content__list
         li 5 Keys to Dominating YouTube Video SEO and Rankings
         li Monetizing Your Message: The Business Side of YouTube
         li Advanced Tactics for YouTube Audience Growth and Engagement
@@ -64,7 +64,7 @@ block content
       p My speaking sessions can guide content creators and expets on the path to building their credibility, growing a community and working with brands for mutual benefit. 
       p
         a(href="https://www.youtube.com/watch?v=KugRFlJ03lc", target="_blank") SESSION SAMPLE: BLOGGY CONFERENCE 2016
-      ul
+      ul.content__list
         li Positioning Yourself As A Subject Matter Expert
         li Standing Out In A Saturated Market or Niche
         li Building Your Personal Brand on Passion, Purpose and Practicality
@@ -77,7 +77,7 @@ block content
       p As a marketing influencer and a designer with a background in advertising, I know firsthand the impact they have on the bottom line of a business. Leveraging new marketing platforms and opportunities is important, but it also means understanding how to use them in the right context. My sessions help audiences demystify social media, video marketing and their other challenges and put them in a position to feel confident in tackling them head on. Below are my primary marketing related sessions but feel free to reach out about other possible topics. 
       p
         a(href="https://www.youtube.com/watch?v=LagGoXnZrQg", target="_blank") SAMPLE SESSION: SUMMIT LIVE 2017
-      ul
+      ul.content__list
         li Using Influencers to Enhance Your Marketing Campaigns
         li Video Marketing Tactics for Lead Generation and List Growth
         li How to Measure the Effectiveness and ROI of Influencer Marketing
@@ -91,7 +91,7 @@ block content
       p Many creative professionals feel overwhelmed by Social Media or that it doesn't fit their personality or skills. Some long for the days of "the work speaking for itself". Storytelling is the advantage that creative professionals have regradless of their medium, and social media can help amplify it and target it to gain the attention of the right audience. My sessions are tactical and actionable and will help creatives feel confident in their social media engagement, by creating content that converts. 
       p
         a(href="https://www.youtube.com/watch?v=KJCoG1SDlbk") SESSSION SAMPLE: HOW DESIGN LIVE 2016
-      ul
+      ul.content__list
         li Cutting Through the Noise: Social Media for Creatives
         li Brand Building Tactics for Creative Professionals
         li Video Production and Video Editing for Creatives and Entrepreneurs
@@ -102,7 +102,7 @@ block content
 
       h3 Workshops and Demonstrations
       p "Show, don't tell", is a very practical process for education and storytelling. My workshops and demonstrations provide audiences with effective tactics and techniques for accomplishing task without feeling overwhelmed. These resources are supported by Q&A sessions that create unique value for each new audience.
-      ul
+      ul.content__list
         li Quick and Painless Video Editing: Adobe Premiere Pro
         li 5 Minute Photoshop: 9 Quick Tricks and Powerful Techniques
         li Creating and Editing Stunning Videos with Your Smartphone
@@ -113,7 +113,7 @@ block content
 
       h3 Motivational Speaking
       p Execution is more often than not, only as powerful as the motive and intentions behind it. The majority of people today identify themselves as struggling with balance. Many in the workplace or in an educational environment identify themselves as victims of bullying or harassment. There is a strong desire to feel in control of one's life as well as one's career and sense of purpose. These sessions help educate and empower individuals to take action and build the habits that lead the outcomes they desire most for themselves.
-      ul
+      ul.content__list
         li Just Create Awesome: Mindset, Messaging and Monetizing
         li Building Your Personal Brand and Personal Power
         li Valuing Your Vulnerability
@@ -163,9 +163,8 @@ block content
           ul.list__padded
             li
               a(href=listItem.href, target=listItem.target)=listItem.text
-          //- p=listItem.text
-            //- if listItem.link == null
-            //- each listItem
+      h4 Book Roberto For Your Event
+      include ../_component/mail-button/mail-button
     include ../_component/review/review
 
 
