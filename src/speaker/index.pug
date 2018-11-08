@@ -55,9 +55,8 @@ block content
         li Advanced Tactics for YouTube Audience Growth and Engagement
         li YouTube Analytics and Dashboard Breakdown
         li Step by Step YouTube Production and Promotion for Businesses and Brands
+      include ../_component/mail-button/mail-button
 
-      .button__small
-        a(href="mailto:booking@robertoblake.com?Subject=Bookng%20Speaking%20Session", target="_top") Book This Speaker
       hr
 
       h3 Thought Leadership and Influence
@@ -71,8 +70,7 @@ block content
         li Building Your Personal Brand on Passion, Purpose and Practicality
         li 5 Core Lessons in Working with Sponsors and Pitching Brands
         li Growing Loyalty: From Content to Community
-      .button__small
-          a(href="mailto:booking@robertoblake.com?Subject=Bookng%20Speaking%20Session", target="_top") Book This Speaker
+      include ../_component/mail-button/mail-button
       hr
 
       h3 Marketing and Advertising
@@ -86,8 +84,7 @@ block content
         li Leveraging Live Video for Marketing, Leads and Sales
         li 5 Pillars of Content Marketing that Converts
         li Leveraging Live Video and Webinars for Leads
-      .button__small
-        a(href="mailto:booking@robertoblake.com?Subject=Bookng%20Speaking%20Session", target="_top") Book This Speaker
+      include ../_component/mail-button/mail-button
       hr
 
       h3 Creative Services and Social Media
@@ -111,8 +108,7 @@ block content
         li Creating and Editing Stunning Videos with Your Smartphone
         li Design on the Go With Adobe Mobile Apps
         li Breaking Down YouTube from A-Z
-      .button__small
-        a(href="mailto:booking@robertoblake.com?Subject=Bookng%20Speaking%20Session", target="_top") Book This Speaker
+      include ../_component/mail-button/mail-button
       hr
 
       h3 Motivational Speaking
@@ -122,8 +118,7 @@ block content
         li Building Your Personal Brand and Personal Power
         li Valuing Your Vulnerability
         li Cyber Bullying and Social Media Safety
-      .button__small
-        a(href="mailto:booking@robertoblake.com?Subject=Bookng%20Speaking%20Session", target="_top") Book This Speaker
+      include ../_component/mail-button/mail-button
       hr
 
       h2 Watch Roberto Speaking at HOW DESIGN LIVE
@@ -145,10 +140,10 @@ block content
               frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen)
       hr
-    .side-content
+    .side-bar
       h3 Speaking Events
       h4 Upcoming Speaking Events
-      ul
+      ul.list__padded
         li PODFEST 2018
         li Social Media Marketing World 2018
         li Richmond VA, AMA KEYNOTE March 2018
@@ -160,14 +155,17 @@ block content
       h4 Previous Speaking Events
 
       each listItem in data['link-list']
-        if listItem.link == true
-        ul 
-          li
-            p
+        if listItem.link == null
+          ul.list__padded
+            li
+              p=listItem.text
+        else
+          ul.list__padded
+            li
               a(href=listItem.href, target=listItem.target)=listItem.text
-              if listItem.link == null
-                //- each listItem
-                p=listItem.text
+          //- p=listItem.text
+            //- if listItem.link == null
+            //- each listItem
     include ../_component/review/review
 
 

@@ -23,11 +23,22 @@
 
   .content__wrapper {
     width: 65%;
+    padding: 2rem;
   }
 
   .side-bar {
     width: 35%;
-    padding: 1rem;
+    padding: 1.5rem;
+    
+    h3 {
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
   }
 
   .two-column {
