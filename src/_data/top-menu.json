@@ -1,6 +1,6 @@
 [
   {
-    "href": "/roberto-blake-replica",
+    "href": "/",
     "text": "",
     "target": ""
   },
@@ -31,7 +31,7 @@
     "type": "dropdown",
     "children": [
       {
-        "href": "/pdf/RobertoBlake-Speaker.pdf",
+        "href": "http://robertoblake.com/pdf/RobertoBlake-Speaker.pdf",
         "text": "Speaker Sheet [PDF]",
         "target": "_blank"
       },
@@ -46,7 +46,7 @@
         "target": "_blank"
       },
       {
-        "href": "/itunes",
+        "href": "http://robertoblake.com/itunes",
         "text": "CSAT Podcast",
         "target": "_blank"
       }

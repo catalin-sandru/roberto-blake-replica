@@ -52,8 +52,8 @@ block content
       p If you'd like to schedule an interview with Roberto please reach out via email rblake@robertoblake.com or check his #[+link('https://calendly.com/robertoblake/30min', 'availability for a 30 minute interview', 'availability for a 30 minute interview')] or a #[+link('https://calendly.com/robertoblake/60min', '60 minute interview', '60 minute interview')] and set an appointment. Interviews are typically 30 minutes but 60 minute interviews are available.
 
       //- pre=JSON.stringify(data['press'], null, 2)
-      each object in data['press']
-        ul.list__padded
+      ul.list__padded
+        each object in data['press']
           li
             a(href=object.href, target=object.target)=object.label
       ul.list__padded

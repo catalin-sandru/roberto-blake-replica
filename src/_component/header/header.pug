@@ -15,7 +15,7 @@ nav.header
               li
                 a.header-menu__sub-link(href=dropdown.href)=dropdown.text
         else
-          a.header__menu-link(href=item.href, target=item.target)=item.text
+          a.header__menu-link(href=`${baseUrl + item.href}`, target=item.target)=item.text
   .header__top
     span.header-name Roberto Blake
     label.icon-menu(for="toggle__top-menu")

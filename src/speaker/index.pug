@@ -154,15 +154,15 @@ block content
         li Video Marketing World 2018
       h4 Previous Speaking Events
 
-      each listItem in data['link-list']
-        if listItem.link == null
-          ul.list__padded
+      ul.list__padded
+        each listItem in data['link-list']
+          if listItem.link && listItem.link == true
+            li
+              p
+                a(href=listItem.href, target=listItem.target)=listItem.text
+          else
             li
               p=listItem.text
-        else
-          ul.list__padded
-            li
-              a(href=listItem.href, target=listItem.target)=listItem.text
       h4 Book Roberto For Your Event
       include ../_component/mail-button/mail-button
     include ../_component/review/review
