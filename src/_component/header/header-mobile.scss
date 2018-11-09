@@ -116,29 +116,29 @@
 }
 
 .header__body--home {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016header.jpg");
-  @extend %header__body
 }
 
 .header__body--about {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016-design-header.jpg");
-  @extend %header__body
 }
 .header__body--speaker {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016-speaker-header.jpg");
-  @extend %header__body
 }
 .header__body--training {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016-marketing-header.jpg");
-  @extend %header__body
 }
 .header__body--press {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016-press-header.jpg");
-  @extend %header__body
 }
 .header__body--contact {
+  @extend %header__body;
   background-image: url("/asset/image/robertoblake2016-header-contact.jpg");
-  @extend %header__body
 }
 
 
