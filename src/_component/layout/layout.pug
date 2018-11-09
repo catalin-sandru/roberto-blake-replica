@@ -1,6 +1,9 @@
 doctype html
 html
   block config
+  -
+    //- var baseUrl = 'http://localhost:3000/'
+    var baseUrl = 'https://freebiker2000.github.io/roberto-blake-replica'
   
   head
     title=title
@@ -18,4 +21,4 @@ html
     include ../featured/featured
     .footer
       include ../footer/footer
-link(rel="stylesheet", href="/style.css")
+link(rel="stylesheet", href=`${baseUrl}/style.css`)
