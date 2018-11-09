@@ -111,14 +111,11 @@
 }
 
 %header__body {
-  // display: block;
-  // background-image: url("asset/image/robertoblake2016header.jpg");
   min-height: 61.1rem;
   background-position: center center;
 }
 
 .header__body--home {
-  // display: block;
   background-image: url("/asset/image/robertoblake2016header.jpg");
   @extend %header__body
 }
