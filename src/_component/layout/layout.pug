@@ -1,9 +1,9 @@
 doctype html
 html
   block config
-  //- -
-  //-   var baseUrl = 'http://localhost:3000'
-  //-   var baseUrl = 'https://freebiker2000.github.io/roberto-blake-replica'
+  -
+      //- var baseUrl = 'http://localhost:3000'
+    var baseUrl = 'https://freebiker2000.github.io/roberto-blake-replica'
   
   head
     title=title
@@ -12,7 +12,7 @@ html
     meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
     link(rel="canonical", href="http://robertoblake.com/")
     if config.entry.css.embed
-      link(rel="stylesheet", href=`embed.css`, inline)
+      link(rel="stylesheet", href=`${baseUrl}/embed.css`, inline)
   body
     include ../header/header
     .content
@@ -21,4 +21,4 @@ html
     include ../featured/featured
     .footer
       include ../footer/footer
-  link(rel="stylesheet", href=`style.css`)
+  link(rel="stylesheet", href=`${baseUrl}/style.css`)
