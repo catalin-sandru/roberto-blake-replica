@@ -22,7 +22,7 @@
   },
   "config": {
     "customUrl": "http://pug-starter.codetap.academy",
-    "githubUrl": "https://freebiker2000.github.io/roberto-blake-replica.git",
+    "githubUrl": "http://github.com/marianzburlea/pug-starter.git",
     "deployToGithubIo": true,
     "directory": {
       "development": "tmp",
@@ -62,7 +62,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marianzburlea/pug-starter.git"
+    "url": "git+https://freebiker2000.github.io/roberto-blake-replica.git"
   },
   "keywords": [
     "pug",
