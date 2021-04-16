@@ -1,9 +1,9 @@
 'use strict';
+require("@babel/register")
 
 // GUlp is a simple platform-agnostic toolkit that helps you automate painful
 // and time-consuming tasks in your workflow
 import gulp from 'gulp';
-import fs from 'fs';
 // browser-sync - Live CSS Reload & Browser Syncing
 import browserSyncLib from 'browser-sync';
 // minimist - argument parser without all the fanciful decoration
@@ -17,6 +17,7 @@ import packageJsonData from './package.json';
 
 import clean from './gulp/clean';
 import copy from './gulp/copy';
+import copyIcon from './gulp/copy-icon';
 import deploy from './gulp/deploy';
 import font from './gulp/font';
 import image from './gulp/image';
@@ -24,11 +25,15 @@ import pug from './gulp/pug';
 import sass from './gulp/sass';
 import template from './gulp/template';
 import watch from './gulp/watch';
+import flip from './gulp/flip';
+import { printCompile, getBaseUrl } from './gulp/util/util.js';
+
+global.compileMode = 'all';
 
 const config = Object.assign({}, packageJsonData.config);
 const args = minimist(process.argv.slice(2));
 const dir = config.directory;
-const taskTarget = args.production ? dir.production : dir.development;
+const taskTarget = args.production ? `${dir.production}-haha` : dir.development;
 
 // Create a new browserSync instance
 const browserSync = browserSyncLib.create();
@@ -44,39 +49,82 @@ const plugins = gulpLoadPlugins({
 // fs.readdirSync('./gulp')
 //   .filter(fileName => /\.(js)$/i.test(fileName))
 //   .map(fileName => fileName.split('.').reduce(a=>a)());
-clean({ gulp, config, args, taskTarget, plugins, browserSync });
-copy({ gulp, config, args, taskTarget, plugins, browserSync });
-deploy({ gulp, config, args, taskTarget, plugins, browserSync });
-font({ gulp, config, args, taskTarget, plugins, browserSync });
-image({ gulp, config, args, taskTarget, plugins, browserSync });
-pug({ gulp, config, args, taskTarget, plugins, browserSync });
-sass({ gulp, config, args, taskTarget, plugins, browserSync });
-template({ gulp, config, args, taskTarget, plugins, browserSync });
-watch({ gulp, config, args, taskTarget, plugins, browserSync });
+const baseUrl = getBaseUrl(args, config)
+const taskOptionList = { gulp, config, args, taskTarget, plugins, browserSync, baseUrl };
+clean(taskOptionList);
+copy(taskOptionList);
+copyIcon(taskOptionList);
+deploy(taskOptionList);
+font(taskOptionList);
+image(taskOptionList);
+pug(taskOptionList);
+sass(taskOptionList);
+template(taskOptionList);
+watch(taskOptionList);
+flip(taskOptionList);
+
 // Server task with watch
-gulp.task('dev', gulp.series(
-  'clean:development',
-  'font',
-  'copy',
-  'image',
-  'sass',
-  'pug',
-  'template',
-  'watch'
-));
+gulp.task(
+  'dev',
+  gulp.series(
+    'clean:development',
+    'font',
+    'copy',
+    'copyIcon',
+    'image',
+    'sass',
+    'pug',
+    'template',
+    'watch'
+  )
+);
 
 // Build production ready code
-gulp.task('build', gulp.series(
-  'clean:production',
-  'font',
-  'copy',
-  'image',
-  'sass',
-  'pug',
-  'template'
-));
+gulp.task(
+  'build',
+  gulp.series(
+    'clean:production',
+    'font',
+    'copy',
+    'copyIcon',
+    'image',
+    'sass',
+    'pug',
+    'template',
+    'flip'
+  )
+);
 
 // Default gulp task
 gulp.task('default', () => {
   console.log('Default gulp task');
 });
+if (!args.production) {
+
+  const readline = require('readline');
+  readline.emitKeypressEvents(process.stdin);
+  if (process.stdin.setRawMode){
+    process.stdin.setRawMode(true)
+  }
+
+  process.stdin.on('keypress', (str, key) => {
+    if (key.name === 'a') {
+      compileMode = 'all';
+    }
+    if (key.name === 'c') {
+      compileMode = 'current';
+    }
+    if (key.ctrl && key.name === 'c') {
+      process.exit();
+      console.clear();
+    } 
+    else {
+      // compile all
+      // console.clear();
+      // console.log(`You pressed the '${str}' key`);
+      // console.log();
+      // console.log(key);
+    }
+    printCompile(compileMode, args);
+  });
+}
